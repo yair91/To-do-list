@@ -1,0 +1,29 @@
+<div class="container-fluid mr-0 ml-0">
+  <div class=" d-flex justify-content-center">
+    <mat-card class=" d-flex mt-5 background-color justify-content-center max-width">
+      <mat-card-content >
+        <form  [formGroup]="newTaskForm" (submit)="addTask()">
+          <mat-form-field class="full-width ">
+            <mat-label>write task</mat-label>
+            <div class="d-flex align-items-center ">
+              <input class="transparency" matInput formControlName="taskTitle" type="text">
+            </div>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit" class="ml-2 full-width">send</button> 
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class=" d-flex justify-content-center align-items-center flex-column p-2">
+    <mat-list *ngFor="let task of tasks" class="max-width">
+      <mat-card class="  background-color align-items-center justify-content-center row-align">
+        <mat-list-item  class="" [ngClass]="{'completed': task.completed == true}">
+          {{task.name}}
+        </mat-list-item>
+        <mat-checkbox class="" [checked]="task.completed" (click)="completedTask(task.id)"></mat-checkbox>
+        <button class="" mat-raised-button color="warn" (click)="deleteTask(task.id)">Remove</button>
+      </mat-card>
+    </mat-list>
+  </div>
+</div>
+ 

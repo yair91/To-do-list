@@ -1,0 +1,24 @@
+.completed{
+  text-decoration: line-through;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.max-width{
+  width: 80%;
+}
+
+.row-align{
+  flex-direction: row;
+  padding: 15px;  
+}
+
+.flex-d{
+  flex-direction: column;
+}
+
+.background-color{
+  background-color: #ffffff80;
+}
