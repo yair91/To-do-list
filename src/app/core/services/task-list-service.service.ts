@@ -16,6 +16,11 @@ export class TaskListServiceService {
     id:2,
     name:'Buy some food',
     completed: false
+   },
+   {
+    id:3,
+    name:'Drink some water',
+    completed: false
    }
   ];
   constructor() { 
